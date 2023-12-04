@@ -8,7 +8,7 @@ WITH renamed AS (SELECT
 SELECT *
 FROM renamed
 WHERE device != 'brand'
-
+ORDER BY user_id DESC
 
 
 
