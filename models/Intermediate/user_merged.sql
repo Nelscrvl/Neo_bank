@@ -2,7 +2,9 @@ SELECT
 
 U.*,
 c.* EXCEPT(user_id),
-chr.is_churner
+chr.is_churner,
+chr.diff_last_today,
+chr.last_transaction_date
 
 FROM{{ ref('users_clean') }} AS U
 LEFT JOIN {{ ref('devices_clean') }} AS d on U.user_id = d.user_id 
