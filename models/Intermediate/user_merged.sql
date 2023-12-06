@@ -1,6 +1,7 @@
 SELECT 
 
 U.*,
+d.device,
 c.* EXCEPT(user_id),
 chr.is_churner,
 chr.diff_last_today,
